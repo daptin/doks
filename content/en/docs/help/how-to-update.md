@@ -1,7 +1,7 @@
 ---
 title: "How to Update"
-description: "Regularly update the installed npm packages to keep your Doks website stable, usable, and secure."
-lead: "Regularly update the installed npm packages to keep your Doks website stable, usable, and secure."
+description: "Regularly update the binary to keep your Daptin website stable, usable, and secure."
+lead: "Regularly update the binary to keep your Daptin website stable, usable, and secure."
 date: 2020-11-12T13:26:54+01:00
 lastmod: 2020-11-12T13:26:54+01:00
 draft: false
@@ -13,11 +13,14 @@ weight: 610
 toc: true
 ---
 
-{{< alert icon="💡" text="Learn more about <a href=\"https://docs.npmjs.com/about-semantic-versioning\">semantic versioning</a> and <a href=\"https://docs.npmjs.com/cli/v6/using-npm/semver#advanced-range-syntax\">advanced range syntax</a>." />}}
+{{< alert icon="💡" text="Learn more about <a href=\"https://go.dev/doc/modules/version-numbers\">semantic versioning</a> and <a href=\"https://go.dev/doc/modules/managing-dependencies#getting_version\">version pinning</a>." />}}
 
-## Check for outdated packages
+## Download latest binary
 
-The [`npm outdated`](https://docs.npmjs.com/cli/v7/commands/npm-outdated) command will check the registry to see if any (or, specific) installed packages are currently outdated:
+Download from  [`releases page`](https://github.com/daptin/daptin/releases).
+
+
+Latest version is:
 
 ```bash
 npm outdated [[<@scope>/]<pkg> ...]

@@ -17,21 +17,21 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/h-enk/doks-child-theme/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/h-enk/doks-child-theme?style=flat-square" alt="GitHub">
+  <a href="https://github.com/daptin/daptin-child-theme/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/daptin/daptin-child-theme?style=flat-square" alt="GitHub">
   </a>
-  <a href="https://github.com/h-enk/doks-child-theme/releases">
-    <img src="https://img.shields.io/github/v/release/h-enk/doks-child-theme?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
+  <a href="https://github.com/daptin/daptin-child-theme/releases">
+    <img src="https://img.shields.io/github/v/release/daptin/daptin-child-theme?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
   </a>
-  <a href="https://github.com/h-enk/doks-child-theme/actions/workflows/codeql-analysis.yml">
-    <img src="https://img.shields.io/github/workflow/status/h-enk/doks-child-theme/CodeQL/master?style=flat-square" alt="GitHub Workflow Status (branch)">
+  <a href="https://github.com/daptin/daptin-child-theme/actions/workflows/codeql-analysis.yml">
+    <img src="https://img.shields.io/github/workflow/status/daptin/daptin-child-theme/CodeQL/master?style=flat-square" alt="GitHub Workflow Status (branch)">
   </a>
   <a href="https://app.netlify.com/sites/hyas-child-theme/deploys">
     <img src="https://img.shields.io/netlify/75395a37-8537-4410-a8c3-d56bf27ec963?style=flat-square" alt="Netlify">
   </a>
 </p>
 
-![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/tn.png)
+![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/daptin/daptin/master/images/tn.png)
 
 ## Demo
 
@@ -89,13 +89,13 @@ Not quite sure? Use the Doks child theme.
 #### Doks child theme
 
 ```bash
-git clone https://github.com/h-enk/doks-child-theme.git my-doks-site && cd my-doks-site
+git clone https://github.com/daptin/daptin-child-theme.git my-doks-site && cd my-doks-site
 ```
 
 #### Doks starter theme
 
 ```bash
-git clone https://github.com/h-enk/doks.git my-doks-site && cd my-doks-site
+git clone https://github.com/daptin/daptin.git my-doks-site && cd my-doks-site
 ```
 
 ### 2. Install dependencies
@@ -124,7 +124,7 @@ Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for comm
 
 - [Netlify Community](https://community.netlify.com/)
 - [Hugo Forums](https://discourse.gohugo.io/)
-- [Doks Discussions](https://github.com/h-enk/doks/discussions)
+- [Doks Discussions](https://github.com/daptin/daptin/discussions)
 
 ## Sponsors
 

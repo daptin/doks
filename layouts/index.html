@@ -6,8 +6,26 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/" role="button">Get Started</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
+      <a class="btn btn-primary btn-lg px-4 mb-2"
+         href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/"
+         role="button">Get Started</a>
+      <p class="meta">Open-source LGPL</p>
+      <ul style="text-align: left">
+        {{ $data := getJSON "https://api.github.com/repos/daptin/daptin/releases" }}
+        {{ range (first 1 $data) }}
+        {{ if hasPrefix .name "v" }}
+        <li>
+          Latest releas: <a target="_blank" href="{{ .html_url }}">{{ .name }}</a>
+          <ul>
+            {{ range .assets }}
+            <li>Download <a href="{{ .browser_download_url }}"> {{ .name }}</a></li>
+            {{ end }}
+          </ul>
+
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
     </div>
   </div>
 </section>
@@ -18,30 +36,93 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Security aware</h2>
-        <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks-child-theme.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
+        <h2 class="h4">Relational database</h2>
+        <ul style="text-align: left">
+          <li>Declarative schema management</li>
+          <li>Rest Endpoint / GraphQL Endpoint</li>
+          <li>Descriptive column types</li>
+          <li>Enforced relations/validations/keys</li>
+          <li>Indexes / relational queries</li>
+        </ul>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Fast by default ⚡️</h2>
-        <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=7731347bb8ce999eff7428a8e763b637">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
+        <h2 class="h4">Fast and developer friendly</h2>
+        <ul style="text-align: left">
+          <li>Online/Offline schema management</li>
+          <li>Stateless and transactional at API level</li>
+          <li>Access based distributed caching</li>
+          <li>&lt;99ms API Response timing</li>
+          <li>Battle tested under variety of work loads</li>
+        </ul>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">SEO-ready</h2>
-        <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
+        <h2 class="h4">Configurable email server</h2>
+        <ul style="text-align: left">
+          <li>Send email outbound with SMTP(S)</li>
+          <li>Access email over IMAP(S)</li>
+          <li>DKIM Signed outgoing email</li>
+          <li>DKIM Verify incoming email</li>
+          <li>SPF Check for incoming email</li>
+        </ul>
       </div>
     </div>
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Full text search</h2>
-        <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
+        <h2 class="h4">Live collaboration (YJS)</h2>
+        <ul style="text-align: left">
+          <li>YJS compatible endpoint</li>
+          <li>Store document with complete history</li>
+          <li>Live share any Javascript Object</li>
+        </ul>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Page layouts</h2>
-        <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
+        <h2 class="h4">Static websites and SSL</h2>
+        <ul style="text-align: left">
+          <li>Host multiple static site from single instance</li>
+          <li>Path based/Domain based routing</li>
+          <li>Automatic SSL with LetsEncrypt</li>
+          <li>Special support for HUGO based websites</li>
+        </ul>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Dark mode</h2>
-        <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
+        <h2 class="h4">API Authorization & AuthN</h2>
+        <ul style="text-align: left">
+          <li>Table level pre/post checks</li>
+          <li>Row level pre/post checks</li>
+          <li>User and Group based permissions</li>
+          <li>Configurable rate limits/connection limits</li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Static file storage</h2>
+        <ul style="text-align: left">
+          <li>Connect 23 supposed cloud or local disk</li>
+          <li>Upload/List/Download/Delete API</li>
+          <li>Columns as "file" column</li>
+          <li>Static embeddable URLs for all assets</li>
+          <li>On-the-fly filters for images</li>
+          <li>HTML render endpoints for MD files</li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Actions and extensions</h2>
+        <ul style="text-align: left">
+          <li>Build your own custom workflows</li>
+          <li>Connect with any API using OpenAPI spec</li>
+          <li>Hook on table/row events</li>
+          <li>Schedule future tasks</li>
+          <li>Schedule repeated tasks</li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Headless or Head ?</h2>
+        <ul style="text-align: left">
+          <li>Headless static binaries</li>
+          <li>Classic web dashboard</li>
+          <li>Office suite dashboard</li>
+          <li>Static binaries with dashboard</li>
+          <li>Build your own dashboard from scratch</li>
+        </ul>
       </div>
     </div>
   </div>
