@@ -17,14 +17,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/daptin/daptin-child-theme/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/daptin/daptin-child-theme?style=flat-square" alt="GitHub">
+  <a href="https://github.com/daptin/doks/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/daptin/doks?style=flat-square" alt="GitHub">
   </a>
-  <a href="https://github.com/daptin/daptin-child-theme/releases">
-    <img src="https://img.shields.io/github/v/release/daptin/daptin-child-theme?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
+  <a href="https://github.com/daptin/doks/releases">
+    <img src="https://img.shields.io/github/v/release/daptin/doks?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
   </a>
-  <a href="https://github.com/daptin/daptin-child-theme/actions/workflows/codeql-analysis.yml">
-    <img src="https://img.shields.io/github/workflow/status/daptin/daptin-child-theme/CodeQL/master?style=flat-square" alt="GitHub Workflow Status (branch)">
+  <a href="https://github.com/daptin/doks/actions/workflows/codeql-analysis.yml">
+    <img src="https://img.shields.io/github/workflow/status/daptin/doks/CodeQL/master?style=flat-square" alt="GitHub Workflow Status (branch)">
   </a>
   <a href="https://app.netlify.com/sites/hyas-child-theme/deploys">
     <img src="https://img.shields.io/netlify/75395a37-8537-4410-a8c3-d56bf27ec963?style=flat-square" alt="Netlify">
@@ -89,7 +89,7 @@ Not quite sure? Use the Doks child theme.
 #### Doks child theme
 
 ```bash
-git clone https://github.com/daptin/daptin-child-theme.git my-doks-site && cd my-doks-site
+git clone https://github.com/daptin/doks.git my-doks-site && cd my-doks-site
 ```
 
 #### Doks starter theme

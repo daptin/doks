@@ -2,14 +2,14 @@
 title: "Authentication"
 description: "Quick start for authentication and authorization for users and groups"
 lead: "Quick start for authentication for users and groups"
-date: 2022-04-`16T13:59:39+01:00 
-lastmod: 2020-11-16T13:59:39+01:00 
-draft: false 
+date: 2022-04-`16T13:59:39+01:00
+lastmod: 2020-11-16T13:59:39+01:00
+draft: false
 images: []
 menu:
 docs:
 parent: "help"
-weight: 130 
+weight: 130
 toc: true
 ---
 
@@ -45,32 +45,31 @@ creation (if the permission allows).
 | Permission   | Bit     | Description                                                                             |
 |--------------|---------|-----------------------------------------------------------------------------------------|
 | None         | 0       | No Access                                                                               |
-| GuestPeek    | 1 << 0  | Peek data internally, but not return in response (eg execute action)                    |
-| GuestRead    | 1 << 1  | Read data (return in api response)                                                      |
-| GuestCreate  | 1 << 2  | Create a new record                                                                     |
-| GuestUpdate  | 1 << 3  | Update an existing record                                                               |
-| GuestDelete  | 1 << 4  | Delete a record                                                                         |
-| GuestExecute | 1 << 5  | Execute an action on the object                                                         |
-| GuestRefer   | 1 << 6  | Add this record to a usergroup                                                          |
-| UserPeek     | 1 << 7  | (For owner) No Access                                                                   |
-| UserRead     | 1 << 8  | (For owner) Peek data internally, but not return in response (eg execute action)        |
-| UserCreate   | 1 << 9  | (For owner) Read data (return in api response)                                          |
-| UserUpdate   | 1 << 10 | (For owner) Create a new record                                                         |
-| UserDelete   | 1 << 11 | (For owner) Update an existing record                                                   |
-| UserExecute  | 1 << 12 | (For owner) Delete a record                                                             |
-| UserRefer    | 1 << 13 | (For owner) Execute an action on the object                                             |
-| GroupPeek    | 1 << 14 | (For group member) No Access                                                            |
-| GroupRead    | 1 << 15 | (For group member) Peek data internally, but not return in response (eg execute action) |
-| GroupCreate  | 1 << 16 | (For group member) Read data (return in api response)                                   |
-| GroupUpdate  | 1 << 17 | (For group member) Create a new record                                                  |
-| GroupDelete  | 1 << 18 | (For group member) Update an existing record                                            |
-| GroupExecute | 1 << 19 | (For group member) Delete a record                                                      |
-
-GroupRefer: 1 << 20,
+| GuestPeek    | 1 << 0  | (*Guest*) Peek data internally, but not return in response (eg execute action)                    |
+| GuestRead    | 1 << 1  | (*Guest*) Read data (return in api response)                                                      |
+| GuestCreate  | 1 << 2  | (*Guest*) Create a new record                                                                     |
+| GuestUpdate  | 1 << 3  | (*Guest*) Update an existing record                                                               |
+| GuestDelete  | 1 << 4  | (*Guest*) Delete a record                                                                         |
+| GuestExecute | 1 << 5  | (*Guest*) Execute an action on the object                                                         |
+| GuestRefer   | 1 << 6  | (*Guest*) Add this record to a usergroup                                                          |
+| UserPeek     | 1 << 7  | (*Owner*) No Access                                                                   |
+| UserRead     | 1 << 8  | (*Owner*) Peek data internally, but not return in response (eg execute action)        |
+| UserCreate   | 1 << 9  | (*Owner*) Read data (return in api response)                                          |
+| UserUpdate   | 1 << 10 | (*Owner*) Create a new record                                                         |
+| UserDelete   | 1 << 11 | (*Owner*) Update an existing record                                                   |
+| UserExecute  | 1 << 12 | (*Owner*) Delete a record                                                             |
+| UserRefer    | 1 << 13 | (*Owner*) Execute an action on the object                                             |
+| GroupPeek    | 1 << 14 | (*Group*) No Access                                                            |
+| GroupRead    | 1 << 15 | (*Group*) Peek data internally, but not return in response (eg execute action) |
+| GroupCreate  | 1 << 16 | (*Group*) Read data (return in api response)                                   |
+| GroupUpdate  | 1 << 17 | (*Group*) Create a new record                                                  |
+| GroupDelete  | 1 << 18 | (*Group*) Update an existing record                                            |
+| GroupExecute | 1 << 19 | (*Group*) Delete a record                                                      |
+| GroupRefer   | 1 << 20 | (*Group*) Add record as a relation                                                      |
 
 `OR` the desired permission bits to get the final permission column value. Example
 
-```DEFAULT_PERMISSION = GuestPeek | GuestExecute | UserCRUD | UserExecute | GroupCRUD | GroupExecute```
+```DEFAULT_PERMISSION = GuestPeek|GuestExecute|UserCRUD|UserExecute|GroupCRUD|GroupExecute```
 
 ## Authorization
 
